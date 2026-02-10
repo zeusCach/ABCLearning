@@ -4,12 +4,13 @@ import { StyleSheet } from 'react-native';
 import { ThemedText } from '../components/themed-text';
 import { ThemedView } from '../components/themed-view';
 
-export default function ModalScreen() {
+export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
-      <ThemedText type="title">This is a modal</ThemedText>
-      <Link href="/" dismissTo style={styles.link}>
-        <ThemedText type="link">Go to home screen</ThemedText>
+      <ThemedText type="title">ABC Learning</ThemedText>
+      <ThemedText>Bienvenido. Esta pantalla evita el error de ruta inicial faltante.</ThemedText>
+      <Link href="/modal" style={styles.link}>
+        <ThemedText type="link">Abrir modal</ThemedText>
       </Link>
     </ThemedView>
   );
@@ -18,12 +19,12 @@ export default function ModalScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-    padding: 20,
+    alignItems: 'center',
+    padding: 24,
+    gap: 12,
   },
   link: {
-    marginTop: 15,
-    paddingVertical: 15,
+    marginTop: 12,
   },
 });
